@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buyer.cs" />
+    <Compile Include="Randomise.cs" />
+    <Compile Include="StartProect.cs" />
     <Compile Include="Supplier.cs" />
     <Compile Include="Director.cs" />
     <Compile Include="Firm.cs" />

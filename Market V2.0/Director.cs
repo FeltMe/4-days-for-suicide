@@ -17,6 +17,11 @@ namespace Market_V2._0
         public List<Product> NeedToBuy = new List<Product>();
         public Supplier supplier = new Supplier();
 
+        public Director()
+        {
+            
+        }
+
         private void Add(string name, List<Product> temp)
         {
             Market.AddNewProducts(temp, name);
