@@ -10,6 +10,8 @@ namespace Market_V2._0
     {
         static void Main(string[] args)
         {
+            StartProect start = new StartProect();
+            start.StartProg();
         }
     }
 }

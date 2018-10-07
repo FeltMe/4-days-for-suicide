@@ -50,7 +50,6 @@
     <Compile Include="Director.cs" />
     <Compile Include="Firm.cs" />
     <Compile Include="Market.cs" />
-    <Compile Include="Plays.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

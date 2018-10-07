@@ -10,7 +10,11 @@ namespace Market_V2._0
     {
         const int AgeLimit = 18;
         Dictionary<string, List<Product>> AllProducts = new Dictionary<string, List<Product>>();
-       
+
+        public Market()
+        {
+            Console.WriteLine("Market created");
+        }
         public void AddNewProducts(List<Product> temp, string name)
         {
             AllProducts.Add(name, temp);
