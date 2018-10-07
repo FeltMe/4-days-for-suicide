@@ -16,7 +16,7 @@ namespace Market_V2._0
         public int IndCode = 1111;
         public List<Product> NeedToBuy = new List<Product>();
         public Supplier supplier = new Supplier();
-    
+
         private void Add(string name, List<Product> temp)
         {
             Market.AddNewProducts(temp, name);
@@ -31,30 +31,39 @@ namespace Market_V2._0
             {
                 Console.WriteLine("Eror Pin");
                 Thread.Sleep(1000);
-            } 
+            }
         }
         public void TotalPricesToBuy()
         {
             foreach (var item in NeedToBuy)
             {
                 TotalPrice += item.Price;
-            }   
+            }
         }
-        public bool AddProducts()
+        public bool AddProducts(int pin)
         {
-            if (TotalPrice > CurentMoney)
+            if (pin == IndCode)
             {
-                Console.WriteLine("Not Inaf Money to buy all products");
-                Thread.Sleep(1000);
-                return false;
+                if (TotalPrice > CurentMoney)
+                {
+                    Console.WriteLine("Not Inaf Money to buy all products");
+                    Thread.Sleep(1000);
+                    return false;
+                }
+                else
+                {
+                    CurentMoney -= TotalPrice;
+                    Add(NameProduct, NeedToBuy);
+                    return true;
+                }
             }
             else
             {
-                CurentMoney -= TotalPrice;
-                Add(NameProduct, NeedToBuy);
-                return true;
-            }
-        }
+                Console.WriteLine("Eror Pin");
+                return false;
 
+            }
+
+        }
     }
 }
